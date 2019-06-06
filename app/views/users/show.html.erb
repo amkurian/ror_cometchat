@@ -1,0 +1,13 @@
+<div id="messages" class="messages">
+  Messages loading...
+</div>
+
+
+<%= form_for :message, remote: true do |f| %>
+  <div class="col-xs-9">
+    Message : <%= f.text_area :text, class: "form-control" %><br/>
+  </div>
+  <div class="col-xs-3 capitalize">
+    <%= button_tag "Send Message", :type => 'button', :onclick => "javascript:sendMessage()", class: "btn btn-info btn-block" %>
+  </div>
+<% end %>
